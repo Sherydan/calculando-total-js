@@ -1,12 +1,19 @@
+// ADD AND REMOVE ITEMS SECTION
+
+// select the current item quantity
 let itemQuantity = document.querySelector("#quantity").value;
+// input to variable
 let inputQuantity = document.querySelector("#quantity");
 
+// buttons to variables
 let btnAdd = document.querySelector("#btnAdd");
 let btnRemove = document.querySelector("#btnRemove");
 
 let add = function () {
   if (itemQuantity !== null) {
+    // add + 1 to itemQuantity variable
     itemQuantity++;
+    // change the "value" attribute to input
     inputQuantity.setAttribute("value", itemQuantity);
     console.log(itemQuantity);
   }
@@ -22,3 +29,18 @@ let remove = function () {
 
 btnAdd.addEventListener("click", add);
 btnRemove.addEventListener("click", remove);
+// END ADD AND REMOVE ITEMS SECTION
+
+// calculate total section
+let btnCalcTotal = document.querySelector("#calculateTotal");
+let totalPrice = document.querySelector("#totalPrice");
+let unitValue = document.querySelector("#unitValue").innerHTML;
+newUnitValue = unitValue.replace("$", "").replace(".", "");
+
+let calcTotal = function () {
+  if (itemQuantity !== null) {
+    totalPrice.innerHTML = parseInt(newUnitValue * itemQuantity);
+  }
+};
+
+btnCalcTotal.addEventListener("click", calcTotal);
