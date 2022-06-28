@@ -1,0 +1,31 @@
+.btn-circle.btn-xl {
+    width: 70px;
+    height: 70px;
+    padding: 10px 16px;
+    border-radius: 35px;
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+.btn-circle {
+    width: 60px;
+    height: 60px;
+    padding: 6px 0px;
+    border-radius: 30px !important;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+.btn-black{
+    background-color: rgb(0, 0, 0) !important; 
+}
+
+.btn-blue{
+    background-color: rgb(0, 35, 189) !important;
+}
+
+.btn-red{
+    background-color: rgb(187, 0, 0) !important;
+}
+
