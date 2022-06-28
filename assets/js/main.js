@@ -37,9 +37,14 @@ let totalPrice = document.querySelector("#totalPrice");
 let unitValue = document.querySelector("#unitValue").innerHTML;
 newUnitValue = unitValue.replace("$", "").replace(".", "");
 
+let formatter = new Intl.NumberFormat("es-CL", {
+  style: "currency",
+  currency: "CLP",
+});
+
 let calcTotal = function () {
   if (itemQuantity !== null) {
-    totalPrice.innerHTML = parseInt(newUnitValue * itemQuantity);
+    totalPrice.innerHTML = formatter.format(parseInt(newUnitValue * itemQuantity));
   }
 };
 
