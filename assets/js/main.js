@@ -15,7 +15,6 @@ let add = function () {
     itemQuantity++;
     // change the "value" attribute to input
     inputQuantity.setAttribute("value", itemQuantity);
-    console.log(itemQuantity);
   }
 };
 
@@ -23,7 +22,6 @@ let remove = function () {
   if (itemQuantity > 1) {
     itemQuantity--;
     inputQuantity.setAttribute("value", itemQuantity);
-    console.log(itemQuantity);
   }
 };
 
@@ -31,7 +29,7 @@ btnAdd.addEventListener("click", add);
 btnRemove.addEventListener("click", remove);
 // END ADD AND REMOVE ITEMS SECTION
 
-// calculate total section
+// CALCULATE TOTAL SECTION
 let btnCalcTotal = document.querySelector("#calculateTotal");
 let totalPrice = document.querySelector("#totalPrice");
 let unitValue = document.querySelector("#unitValue").innerHTML;
@@ -47,5 +45,21 @@ let calcTotal = function () {
     totalPrice.innerHTML = formatter.format(parseInt(newUnitValue * itemQuantity));
   }
 };
-
 btnCalcTotal.addEventListener("click", calcTotal);
+// END CALCULATE TOTAL SECTION
+
+// SELECT COLOR SECTION
+let btnBlack = document.querySelector("#blackColor");
+let btnRed = document.querySelector("#redColor");
+let btnBlue = document.querySelector("#blueColor");
+let selectedColor = document.querySelector("#selectedColor");
+
+function setColor(color) {
+  selectedColor.innerHTML = color;
+}
+
+btnBlack.addEventListener("click", function(){setColor(btnBlack.getAttribute("colorName"))});
+btnRed.addEventListener("click", function(){setColor(btnRed.getAttribute("colorName"))});
+btnBlue.addEventListener("click", function(){setColor(btnBlue.getAttribute("colorName"))});
+//END SELECT COLOR SECTION
+
