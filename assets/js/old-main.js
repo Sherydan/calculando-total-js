@@ -22,6 +22,7 @@ let remove = function () {
   if (itemQuantity > 1) {
     itemQuantity--;
     inputQuantity.setAttribute("value", itemQuantity);
+    
   }
 };
 
@@ -53,6 +54,8 @@ let btnBlack = document.querySelector("#blackColor");
 let btnRed = document.querySelector("#redColor");
 let btnBlue = document.querySelector("#blueColor");
 let selectedColor = document.querySelector("#selectedColor");
+
+btnBlue.style("background-color: blue;")
 
 function setColor(color) {
   selectedColor.innerHTML = color;
