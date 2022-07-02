@@ -7,7 +7,7 @@ document.querySelectorAll("button").forEach(el => el.addEventListener("click", f
         inputQuantity.setAttribute("value", (el.attributes[0].value === "-") ? eval(inputQuantity.getAttribute("value") + "+" + "1" ) : (inputQuantity.getAttribute("value") > 1) ? eval(inputQuantity.getAttribute("value") + "-" + "1") : eval(inputQuantity.getAttribute("value") + "-" + "0") )
     }
     if (el.id === "calculateTotal") {
-        document.querySelector("#totalPrice").innerHTML = parseInt(document.querySelector("#unitValue").innerHTML * inputQuantity.getAttribute("value")).toLocaleString("es-CL", {style: "currency", currency: "CLP"});
+        document.querySelector("#totalPrice").innerHTML = parseInt(document.querySelector("#priceSelect").value * inputQuantity.getAttribute("value")).toLocaleString("es-CL", {style: "currency", currency: "CLP"});
         document.querySelector("#totalQuantity").innerHTML = inputQuantity.getAttribute("value");
     }
 }))
