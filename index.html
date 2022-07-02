@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
     <title>Calculando Total</title>
 </head>
 
@@ -19,7 +19,7 @@
                     <div class="row">
                         <img src="assets/img/g29-main.jpg" alt="">
                     </div>
-                    
+
                 </div>
                 <div class="col">
                     <div class="row">
@@ -37,7 +37,15 @@
 
                     <div class="row">
                         <div class="pricing">
-                            <p >Unit Value: <span id="unitValue">249990</span> </p>
+                            <div class="form-floating">
+                                <select class="form-select" id="priceSelect">
+                                    <option value="299990" selected>$299.990</option>
+                                    <option value="149990">$149.990</option>
+                                    <option value="100990">$100.990</option>
+                                </select>
+                                <label for="priceSelect">Select Price</label>
+                            </div>
+
                         </div>
                     </div>
 
@@ -58,9 +66,12 @@
 
                     <div class="row mb-3">
                         <div class="color-picker text-center">
-                            <button colorName="Black" id="blackColor" type="button" class="btn btn-primary btn-circle btn-black btn-lg m-1"></button>
-                            <button colorName="Red" id="redColor" type="button" class="btn btn-primary btn-circle btn-red btn-lg m-1"></button>
-                            <button colorName="Blue" id="blueColor" type="button" class="btn btn-primary btn-circle btn-blue btn-lg m-1"></button>
+                            <button colorName="Black" id="blackColor" type="button"
+                                class="btn btn-primary btn-circle btn-black btn-lg m-1"></button>
+                            <button colorName="Red" id="redColor" type="button"
+                                class="btn btn-primary btn-circle btn-red btn-lg m-1"></button>
+                            <button colorName="Blue" id="blueColor" type="button"
+                                class="btn btn-primary btn-circle btn-blue btn-lg m-1"></button>
                         </div>
                     </div>
 
@@ -68,9 +79,11 @@
                         <div class="col">
                             <div class="input-group">
                                 <input id="quantity" type="text" class="form-control" placeholder="1" value="1"
-                                    aria-label="Recipient's quantity with two button addons">
-                                <button operator="-" class="btn btn-outline-secondary" type="button" id="btnAdd">Add</button>
-                                <button operator="+" class="btn btn-outline-secondary" type="button" id="btnRemove">Remove</button>
+                                    aria-label="Recipient's quantity with two button addons" readonly>
+                                <button operator="-" class="btn btn-outline-secondary" type="button"
+                                    id="btnAdd">Add</button>
+                                <button operator="+" class="btn btn-outline-secondary" type="button"
+                                    id="btnRemove">Remove</button>
                             </div>
                         </div>
                         <div class="col">
